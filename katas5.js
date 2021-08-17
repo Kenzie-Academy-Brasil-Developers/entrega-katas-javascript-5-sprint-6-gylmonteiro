@@ -199,4 +199,4 @@ const evaluateExpression = (str, obj) => {
     }
 }
 
-testEvaluateExpression1();
+//testEvaluateExpression1();
