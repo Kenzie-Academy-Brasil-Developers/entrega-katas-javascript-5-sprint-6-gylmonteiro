@@ -110,19 +110,19 @@ testCalculateRemainder2();
 
 const testDistinctValues1 = () => {
     let result = distinctValues([1,3,5,3,7,3,1,1,5]);
-    let expected = [1,3,5,7];
-    console.log(expected)
+    let expected = [1,3,5,7].join(" ");
     console.assert(result === expected, `esperado: ${expected} , obtido: ${result}`);
 }
 
 const testDistinctValues2 = () => {
     let result = distinctValues([1,8,8,1,2,2,4,5,7,6,6]);
-    let expected = [1,8,2,4,5,7,6];
+    let expected = [1,8,2,4,5,7,6].join(" ");
     console.assert(result === expected, `esperado: ${expected} , obtido: ${result}`);
 }
 
 const distinctValues = (array) => {
-    return [...new Set(array)];
+    let newarray = [...new Set(array)];
+    return newarray.join(" ");
 }
 
 testDistinctValues1();
@@ -135,5 +135,28 @@ const testCountValues1 = () => {
     let result = countValues([1,3,5,3,7,3,1,1,5]);
     let expected = "1(3) 3(3) 5(2) 7(1)";
     console.assert(result === expected, `esperado:${expected}, obtido: ${result}`)
+}
+
+const countValues = (array) => {
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array.length; j++) {
+            if (array[0] === array[j]) {
+                
+            }
+        }
+    }
+
+    
+    // let newNumbers = {};
+    // for (let i = 0; i < array.length; i++) {
+    //     if (newNumbers[array[i]] === "undefined") {
+    //         newNumbers[array[i]] = 1;
+    //     } else {
+    //         // newNumbers[array[i]] += 1;
+    //     }
+    // }
+    // console.log(newNumbers)
 
 }
+
+testCountValues1();
