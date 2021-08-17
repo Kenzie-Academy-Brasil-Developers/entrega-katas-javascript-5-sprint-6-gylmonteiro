@@ -171,3 +171,32 @@ testCountValues1();
 testCountValues2();
 
 // 8º Katas
+function testEvaluateExpression1() {
+    let result = evaluateExpression("a + b + c - d", {a: 1, b: 7, c: 3, d: 14});
+    let expected = -3
+    console.assert(result === expected, `esperado: ${expected}, obtido: ${result}`)
+ }
+
+ function testEvaluateExpression1() {
+    let result = evaluateExpression("a + b + c - d", {a: 1, b: 7, c: 3, d: 14});
+    let expected = -3
+    console.assert(result === expected, `esperado: ${expected}, obtido: ${result}`)
+ }
+
+const evaluateExpression = (str, obj) => {
+    newArrayKeys = Object.keys(obj);
+    newArrayValues = Object.values(obj)
+    let acc = 0;
+    let n1 = 0;
+    let n2 = 0;
+    let opr = ""
+    //console.log(obj)
+    for (let i = 0; i < str.length; i++) {
+        let position = `${str[i]}`
+        console.log(position)
+        console.log(obj.position)
+        
+    }
+}
+
+testEvaluateExpression1();
